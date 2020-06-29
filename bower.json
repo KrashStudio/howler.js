@@ -1,5 +1,5 @@
 {
-  "name": "howler.js",
+  "name": "@krashstudio/howler.js",
   "description": "Javascript audio library for the modern web.",
   "homepage": "https://howlerjs.com",
   "keywords": [
@@ -19,7 +19,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/goldfire/howler.js.git"
+    "url": "git://github.com/KrashStudio/howler.js.git"
   },
   "main": "dist/howler.js",
   "license": "MIT",

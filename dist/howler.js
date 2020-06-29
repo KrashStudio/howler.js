@@ -1,5 +1,5 @@
 /*!
- *  howler.js v2.2.0
+ *  howler.js v2.2.0-fork1
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
@@ -311,6 +311,11 @@
       if (!self._mobileUnloaded && self.ctx.sampleRate !== 44100) {
         self._mobileUnloaded = true;
         self.unload();
+        
+        // In some cases, the unload method results in a null context
+        if (!self.ctx) {
+          return;
+        }
       }
 
       // Scratch buffer for enabling iOS to dispose of web audio buffers correctly, as per:
@@ -2537,7 +2542,7 @@
 /*!
  *  Spatial Plugin - Adds support for stereo and 3D audio where Web Audio is supported.
  *  
- *  howler.js v2.2.0
+ *  howler.js v2.2.0-fork1
  *  howlerjs.com
  *
  *  (c) 2013-2020, James Simpson of GoldFire Studios
